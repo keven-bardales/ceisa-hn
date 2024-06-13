@@ -3,9 +3,10 @@ import NavBar from "./components/navbar";
 import Image from "next/image";
 import main_section_image from "@/root/public/landing/items/main_section_image_2.png";
 import { cn } from "@/lib/utils/cn";
-import { Home, Lightbulb, LocateIcon, Mail, Sun, Zap } from "lucide-react";
+import { Home, Lightbulb, LocateIcon, Mail, Sun, TrendingUp, Zap } from "lucide-react";
 import LandingButton from "./components/landing-button";
 import blueLogo from "@/root/public/landing/logos/logo-oficial-azul.png";
+import logowhite from "@/root/public/landing/logos/logo_white.png";
 import yellowLogo from "@/root/public/landing/logos/logo-oficial-amarillo.png";
 import { FloatLabel } from "primereact/floatlabel";
 import { InputText } from "primereact/inputtext";
@@ -28,15 +29,17 @@ export default function LandingPage() {
         <nav className="bg-landing-first-bg w-full h-full">
           <section className="flex gap-x-4 justify-between items-center container mx-auto py-2">
             {/* <Image className="w-24" src={blueLogo} height={100} width={100} alt="Ceisa-Logo" /> */}
-            <Image className="w-24" src={yellowLogo} height={100} width={100} alt="Ceisa-Logo" />
-            {/* <div className="flex flex-col justify-center">
+            {/* <Image className="w-24" src={yellowLogo} height={100} width={100} alt="Ceisa-Logo" /> */}
+            {/* <Image className="w-24" src={logowhite} height={100} width={100} alt="Ceisa-Logo" /> */}
+            <div className="flex flex-col justify-center">
               <Lightbulb className="text-landing-secondary-main rounded-lg mx-auto h-12 w-12" />
               <div className="flex items-center text-lg font-bold text-landing-secondary-main">
                 <span>CE</span>
                 <Zap className="text-landing-primary-main w-8 h-8 bg-transparent rounded-lg" />
                 <span>SA</span>
               </div>
-            </div> */}
+            </div>
+
             <NavBar className="flex gap-x-2 items-center justify-evenly"></NavBar>
           </section>
         </nav>
@@ -50,7 +53,7 @@ export default function LandingPage() {
             Contactanos y cotiza los productos electricos a los mejores precios del mercado
           </p>
           <div className="flex mx-auto justify-center gap-x-4 items-stretch">
-            <Home className=" text-white h-[3.5rem] w-[3.5rem] bg-landing-secondary-main p-2 rounded-lg" />
+            <Home className="text-landing-primary-main h-[3.5rem] w-[3.5rem] p-2 rounded-lg" />
             <LandingButton>COTIZA YA</LandingButton>
           </div>
         </div>
@@ -68,27 +71,28 @@ export default function LandingPage() {
       <section className={cn("!pt-[22rem] !pb-32 bg-landing-second-bg relative", mainSectionPadding)}>
         <div className="container mx-auto flex flex-col gap-y-6">
           <Sun className="text-landing-primary-main h-[3.5rem] w-[3.5rem] mx-auto font-bold" />
-          <h2 className="text-landing-secondary-main font-[900] text-5xl text-center mx-auto max-w-[60%]">
+          <h2 className="text-landing-text-primary font-[900] text-5xl text-center mx-auto max-w-[60%]">
             Servicio de calidad de una empresa con mas de 40 años de experiencia en el mercado de productos electricos
           </h2>
-          <p className="text-center text-2xl font-semibold text-landing-secondary-main max-w-[60%] mx-auto">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat doloribus temporibus praesentium omnis. Quaerat obcaecati odio
-            repellendus minima, distinctio deleniti sit expedita perferendis eveniet labore laudantium numquam minus amet odit! Dignissimos eveniet
-            minus ipsum facere illum iste. Amet at enim sed fugiat dolor
+          <p className="text-center text-2xl font-semibold text-landing-text-primary max-w-[60%] mx-auto">
+            Comercialización y distribución de materiales para instalaciones eléctricas. Nos especializamos en una amplia variedad de productos,
+            incluyendo cables, conductores, tuberías, canalizaciones, y equipos de protección. Todos nuestros productos cumplen con los más altos
+            estándares de calidad y seguridad. Nuestro enfoque exclusivo en la venta nos permite ofrecer un servicio experto y personalizado. Ya sea
+            para proyectos residenciales, comerciales o industriales, tenemos todo lo necesario para que sus instalaciones sean seguras y eficientes.
           </p>
-          <div className="flex justify-evenly items-center mx-auto font-semibold text-lg">
-            <span className="text-landing-primary-main">Item 1</span>
-            <span className="w-[0.2rem] h-[1.125rem] mx-2 bg-landing-primary-main"></span>
+          {/* <div className="flex justify-evenly items-center mx-auto font-bold text-lg">
+            <span className="text-landing-primary-main font-bold">Item 1</span>
+            <span className="w-[0.2rem] h-[1.125rem] mx-2 bg-landing-primary-main font-bold"></span>
             <span className="text-landing-primary-main">Item 2</span>
-            <span className="w-[0.2rem] h-[1.125rem] mx-2 bg-landing-primary-main"></span>
+            <span className="w-[0.2rem] h-[1.125rem] mx-2 bg-landing-primary-main font-bold"></span>
             <span className="text-landing-primary-main">Item 3</span>
-            <span className="w-[0.2rem] h-[1.125rem] mx-2 bg-landing-primary-main"></span>
+            <span className="w-[0.2rem] h-[1.125rem] mx-2 bg-landing-primary-main font-bold"></span>
             <span className="text-landing-primary-main">Item 4</span>
-            <span className="w-[0.2rem] h-[1.125rem] mx-2 bg-landing-primary-main"></span>
+            <span className="w-[0.2rem] h-[1.125rem] mx-2 bg-landing-primary-main font-bold"></span>
             <span className="text-landing-primary-main">Item 5</span>
-            <span className="w-[0.2rem] h-[1.125rem] mx-2 bg-landing-primary-main"></span>
+            <span className="w-[0.2rem] h-[1.125rem] mx-2 bg-landing-primary-main font-bold"></span>
             <span className="text-landing-primary-main">Item 6</span>
-          </div>
+          </div> */}
         </div>
       </section>
       <section className={cn("!pt-[6rem] !pb-32 bg-landing-first-bg relative", mainSectionPadding)}>
@@ -104,9 +108,19 @@ export default function LandingPage() {
               SA
             </div>
           </div>
-          <p className="text-center text-2xl font-semibold text-landing-secondary-main max-w-[60%] mx-auto">
-            Intersección Belén-Country, avenida Cabañas, Comayagüela
-          </p>
+          <div className="flex flex-col gap-y-1">
+            {/* <p className="font-bold text-3xl text-center text-landing-primary-main">Dirección</p> */}
+            <p className="text-center text-2xl font-semibold text-landing-secondary-main max-w-[60%] mx-auto">
+              Intersección Belén-Country, avenida Cabañas, Comayagüela
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-y-1">
+            {/* <p className="font-bold text-3xl text-center text-landing-primary-main">Dirección</p> */}
+            <p className="text-center text-2xl font-semibold text-landing-secondary-main max-w-[60%] mx-auto">
+              Abiertos de lunes a viernes de 8:00 am a 5:00 pm, sábados de 8:00 am a 12:00 pm
+            </p>
+          </div>
 
           <div>
             <iframe
@@ -120,6 +134,39 @@ export default function LandingPage() {
         </div>
       </section>
       <section className={cn("!pt-[6rem] !pb-32 bg-landing-second-bg relative", mainSectionPadding)}>
+        <div className="container mx-auto items-stretch flex justify-center gap-x-4">
+          <div className="p-5 rounded-xl bg-landing-first-bg max-w-[32%] grow flex flex-col gap-y-2 mt-10 items-center">
+            <TrendingUp className="text-landing-primary-main h-8 w-8 font-bold" />
+            <h3 className="text-4xl text-center font-extrabold text-landing-secondary-main">Misión</h3>
+            <p className="text-center text-2xl font-medium text-gray-100 mx-auto">
+              Nuestra misión es proporcionar materiales de alta calidad que garanticen la seguridad y eficiencia de las instalaciones eléctricas. Nos
+              comprometemos a ofrecer un servicio excepcional, con productos de valor y soluciones personalizadas que satisfagan las necesidades de
+              nuestros clientes, promoviendo un uso responsable de la energía.
+            </p>
+          </div>
+
+          <div className="p-5 rounded-xl bg-landing-first-bg max-w-[32%] grow flex flex-col gap-y-2 items-center">
+            <TrendingUp className="text-landing-primary-main h-8 w-8 font-bold" />
+            <h3 className="text-4xl text-center font-extrabold text-landing-secondary-main">Valores</h3>
+            <p className="text-center text-2xl font-medium text-gray-100 mx-auto">
+              Nuestra misión es proporcionar materiales de alta calidad que garanticen la seguridad y eficiencia de las instalaciones eléctricas. Nos
+              comprometemos a ofrecer un servicio excepcional, con productos de valor y soluciones personalizadas que satisfagan las necesidades de
+              nuestros clientes, promoviendo un uso responsable de la energía.
+            </p>
+          </div>
+
+          <div className="p-5 rounded-xl bg-landing-first-bg max-w-[32%] grow flex flex-col gap-y-2 mt-10 items-center">
+            <TrendingUp className="text-landing-primary-main h-8 w-8 font-bold" />
+            <h3 className="text-4xl text-center font-extrabold text-landing-secondary-main">Visión</h3>
+            <p className="text-center text-2xl font-medium text-gray-100 mx-auto">
+              Ser la empresa líder en el mercado de materiales eléctricos, reconocida por nuestra excelencia en servicio y compromiso, aspirando a ser
+              el socio preferido de nuestros clientes, contribuyendo al desarrollo de infraestructuras eléctricas seguras y eficientes en toda
+              edificación.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className={cn("!pt-[6rem] !pb-32 bg-landing-first-bg relative", mainSectionPadding)}>
         <div className="container mx-auto flex flex-col gap-y-6">
           <div className="flex flex-col gap-y-2 mr-auto px-36 text-left">
             <Mail className="text-landing-primary-main h-[3.5rem] w-[3.5rem] font-bold" />
