@@ -11,7 +11,7 @@ export class BranchOfficeSourceImpl extends BaseDataSourceImpl<BranchOfficeEntit
     const branchOffices = await db.branchOffice.findMany({
       include: {
         address: true,
-        BranchOfficePhones: true,
+        branchOfficePhones: true,
       },
     });
 

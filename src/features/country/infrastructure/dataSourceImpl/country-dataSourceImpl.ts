@@ -11,7 +11,7 @@ export class CountrySourceImpl extends BaseDataSourceImpl<CountryEntity> {
     const countries = await db.country.findMany({
       include: {
         states: true,
-        Address: true,
+        address: true,
       },
     });
 

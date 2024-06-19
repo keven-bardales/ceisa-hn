@@ -10,7 +10,7 @@ export class WarehouseSourceImpl extends BaseDataSourceImpl<WarehouseEntity> {
   async getAllWarehouses(): Promise<WarehouseEntity[] | null> {
     const warehouses = await db.warehouse.findMany({
       include: {
-        Address: true,
+        address: true,
         branchOffice: true,
       },
     });

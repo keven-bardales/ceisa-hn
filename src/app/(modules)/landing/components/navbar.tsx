@@ -2,36 +2,45 @@ import { NavBarItem } from "./nav-bar-item";
 
 interface NavBarProps {
   className: string;
+  onItemClicked?: () => void;
 }
 
 const landingNavBarItems = [
   {
     content: "INICIO",
-    href: "/home",
+    href: "/landing#home",
   },
   {
     content: "TIENDA",
-    href: "/shop",
+    href: "/landing#store",
   },
   {
     content: "BLOG",
-    href: "/blog",
+    href: "/landing#blog",
   },
   {
     content: "NOSOTROS",
-    href: "/about-us",
+    href: "/landing#about-us",
   },
   {
     content: "CONTACTO",
-    href: "/contact-us",
+    href: "/landing#contact",
   },
 ];
 
-export default function NavBar({ className }: NavBarProps) {
+export default function NavBarItems({ className, onItemClicked }: NavBarProps) {
   return (
     <div className={className}>
       {landingNavBarItems.map((item, index) => (
-        <NavBarItem key={index} href={item.href}>
+        <NavBarItem
+          onClick={() => {
+            if (onItemClicked) {
+              onItemClicked();
+            }
+          }}
+          key={index}
+          href={`${item.href}`}
+        >
           {item.content}
         </NavBarItem>
       ))}

@@ -11,8 +11,8 @@ export class CompanySourceImpl extends BaseDataSourceImpl<CompanyEntity> {
     const companies = await db.company.findMany({
       include: {
         branches: true,
-        CompanyFaxes: true,
-        CompanyPhones: true,
+        companyPhones: true,
+        companyFaxes: true,
       },
     });
 
