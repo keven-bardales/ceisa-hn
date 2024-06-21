@@ -11,12 +11,12 @@ const landingNavBarItems = [
     href: "/landing#home",
   },
   {
-    content: "TIENDA",
-    href: "/landing#store",
+    content: "PRODUCTOS",
+    href: "/landing#products",
   },
   {
-    content: "BLOG",
-    href: "/landing#blog",
+    content: "UBICACIÓN",
+    href: "/landing#location",
   },
   {
     content: "NOSOTROS",

@@ -12,8 +12,21 @@
 
 html {
   font-size: 14px;
+  --scroll-behavior: smooth!important;
+scroll-behavior: smooth!important;
 }
 
+body {
+  font-size: 14px;
+  --scroll-behavior: smooth!important;
+scroll-behavior: smooth!important;
+}
+
+main {
+  font-size: 14px;
+  --scroll-behavior: smooth!important;
+scroll-behavior: smooth!important;
+}
 
 .dot{
   color: #FDFD0D;

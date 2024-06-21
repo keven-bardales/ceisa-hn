@@ -6,7 +6,7 @@
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS='--max-http-header-size=12800000' next dev",
+    "dev": "cross-env NODE_OPTIONS='--max-http-header-size=12800000' next dev --turbo",
     "build": "next build",
     "start": "cross-env NODE_OPTIONS='--max-http-header-size=12800000' next start",
     "studio": "NODE_OPTIONS='--max-http-header-size=12800000' prisma studio",
@@ -22,6 +22,7 @@
     "@react-pdf/renderer": "^3.4.4",
     "bcryptjs": "^2.4.3",
     "clsx": "^2.1.0",
+    "framer-motion": "^11.2.11",
     "lucide-react": "^0.379.0",
     "next": "14.2.2",
     "next-auth": "5.0.0-beta.16",

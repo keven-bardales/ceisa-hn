@@ -87,7 +87,7 @@ export const LANDING_SECONDARY_COLORS = {
   "landing-secondary-950": "#13243e",
   "landing-secondary-main": "white",
   "landing-first-bg": "white",
-  "landing-second-bg": "#EBEBEB",
+  "landing-second-bg": "#F5F5F5",
   "landing-button-bg-primary": "#FFEB00",
   "landing-button-bg-secondary": "black",
   "landing-button-text-primary-hover": "black",

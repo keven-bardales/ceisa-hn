@@ -14,6 +14,8 @@ import IconComponent from "./icon-component";
 import { Sidebar as PrimeSidebar } from "primereact/sidebar";
 import { useState } from "react";
 import { cn } from "@/lib/utils/cn";
+import { handleScroll } from "../utils/handle-scroll";
+import Link from "next/link";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +25,9 @@ export default function NavBar() {
       <section className="flex gap-x-4 px-4 justify-between items-center container mx-auto py-2">
         {/* <Image className="w-24" src={blueLogo} height={100} width={100} alt="Ceisa-Logo" /> */}
         {/* <Image className="w-24" src={yellowLogo} height={100} width={100} alt="Ceisa-Logo" /> */}
-        <Image className="w-20" src={fullYellowLogo} height={100} width={100} alt="Ceisa-Logo" />
+        <Link href={"/landing/#home"}>
+          <Image className="w-20 cursor-pointer" src={fullYellowLogo} height={100} width={100} alt="Ceisa-Logo" />
+        </Link>
         {/* <Image className="w-24" src={logowhite} height={100} width={100} alt="Ceisa-Logo" /> */}
         {/* <div className="flex flex-col justify-center">
             <Lightbulb className="text-landing-secondary-main rounded-lg mx-auto h-12 w-12" />
