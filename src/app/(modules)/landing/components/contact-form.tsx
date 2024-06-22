@@ -15,7 +15,7 @@ export default function ContactForm() {
   });
 
   return (
-    <div className="flex flex-col w-full gap-y-8 md:px-36 py-4">
+    <div className="flex flex-col w-full gap-y-8 py-4">
       <FloatLabel>
         <InputText
           value={formState.name}

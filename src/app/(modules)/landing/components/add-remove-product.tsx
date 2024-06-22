@@ -5,12 +5,23 @@ import { useQuotedProductsStore } from "../stores/quoted-products.store";
 import IconComponent from "./icon-component";
 import LandingButton from "./landing-button";
 import { LANDINGPRODUCTS } from "../constants/products";
+import { cn } from "@/lib/utils/cn";
 
 export interface AddRemoveProductProps {
   product: (typeof LANDINGPRODUCTS)[0];
+  hideButton?: boolean;
+  containerClassName?: string;
+  addAndRestClassNames?: string;
+  addAndRestContainerClassName?: string;
 }
 
-export default function AddRemoveProduct({ product }: AddRemoveProductProps) {
+export default function AddRemoveProduct({
+  product,
+  hideButton = false,
+  containerClassName,
+  addAndRestClassNames,
+  addAndRestContainerClassName,
+}: AddRemoveProductProps) {
   const decreaseQuotedProduct = useQuotedProductsStore((state) => state.decreaseQuotedProduct);
   const { showToast } = useToast();
   const addQuotedProduct = useQuotedProductsStore((state) => state.addQuotedProduct);
@@ -22,7 +33,7 @@ export default function AddRemoveProduct({ product }: AddRemoveProductProps) {
     minimumFractionDigits: 0,
   });
 
-  if (!productExists) {
+  if (!productExists && !hideButton) {
     return (
       <LandingButton
         onClick={() => {
@@ -56,13 +67,18 @@ export default function AddRemoveProduct({ product }: AddRemoveProductProps) {
   }
 
   return (
-    <div className="flex grow">
-      <div className="flex flex-col shrink-0 bg-black p-2 rounded-md rounded-r-none gap-y-1">
+    <div className={cn("flex grow", containerClassName && containerClassName)}>
+      <div
+        className={cn(
+          "flex flex-col shrink-0 bg-black p-2 rounded-md rounded-r-none gap-y-1",
+          addAndRestContainerClassName && addAndRestContainerClassName
+        )}
+      >
         <IconComponent
           onClick={() => {
             addQuotedProduct(product);
           }}
-          className="mx-auto cursor-pointer bg-black text-white h-4 w-4 rounded-none p-0"
+          className={cn("mx-auto cursor-pointer bg-transparent text-white h-4 w-4 rounded-none p-0", addAndRestClassNames && addAndRestClassNames)}
           icon={ArrowUp}
         />
         <hr />
@@ -70,11 +86,13 @@ export default function AddRemoveProduct({ product }: AddRemoveProductProps) {
           onClick={() => {
             decreaseQuotedProduct(product);
           }}
-          className="mx-auto cursor-pointer bg-black text-white h-[0.75rem] w-[0.75rem] rounded-none p-0"
+          className={cn("mx-auto cursor-pointer bg-transparent text-white h-4 w-4 rounded-none p-0", addAndRestClassNames && addAndRestClassNames)}
           icon={ArrowDown}
         />
       </div>
-      <LandingButton className="border-l-0 rounded-l-none p-3 grow">Agregado {numberFormat.format(productExists?.quantity)} </LandingButton>
+      {!hideButton && (
+        <LandingButton className="border-l-0 rounded-l-none p-3 grow">Agregado {numberFormat.format(productExists?.quantity as any)} </LandingButton>
+      )}
     </div>
   );
 }

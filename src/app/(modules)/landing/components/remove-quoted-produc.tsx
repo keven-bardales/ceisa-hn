@@ -43,7 +43,7 @@ export default function RemoveProduct({ product }: RemoveProductProps) {
           });
         }
       }}
-      className={cn("mx-auto cursor-pointer bg-black text-white h-12 w-14", !productExists && "opacity-50 cursor-not-allowed")}
+      className={cn("cursor-pointer bg-black text-white h-12 w-14", !productExists && "opacity-50 cursor-not-allowed")}
       icon={Trash2Icon}
     />
   );

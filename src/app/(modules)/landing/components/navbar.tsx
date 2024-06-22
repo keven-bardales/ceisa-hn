@@ -5,7 +5,7 @@ interface NavBarProps {
   onItemClicked?: () => void;
 }
 
-const landingNavBarItems = [
+export const landingNavBarItems = [
   {
     content: "INICIO",
     href: "/landing#home",

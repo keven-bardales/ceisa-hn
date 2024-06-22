@@ -16,13 +16,14 @@ import { useState } from "react";
 import { cn } from "@/lib/utils/cn";
 import { handleScroll } from "../utils/handle-scroll";
 import Link from "next/link";
+import CartModal from "./cart-modal";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="bg-landing-bg-nav w-full h-full">
-      <section className="flex gap-x-4 px-4 justify-between items-center container mx-auto py-2">
+      <section className="flex gap-x-4 px-4 items-center container mx-auto py-2">
         {/* <Image className="w-24" src={blueLogo} height={100} width={100} alt="Ceisa-Logo" /> */}
         {/* <Image className="w-24" src={yellowLogo} height={100} width={100} alt="Ceisa-Logo" /> */}
         <Link href={"/landing/#home"}>
@@ -38,7 +39,8 @@ export default function NavBar() {
             </div>
           </div> */}
 
-        <NavBarItems className="hidden gap-x-2 items-center justify-evenly md:flex"></NavBarItems>
+        <NavBarItems className="hidden gap-x-2 items-center justify-evenly md:flex md:ml-auto"></NavBarItems>
+        <CartModal iconClassNames="h-12 w-12 cursor-pointer ml-auto md:ml-0" />
         <IconComponent
           onClick={(e: any) => {
             setIsOpen(true);
