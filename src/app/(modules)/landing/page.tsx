@@ -12,6 +12,7 @@ import QuoteNowComponent from "./components/quote-now-component";
 import Link from "next/link";
 import { landingNavBarItems } from "./components/navbar";
 import WhatsappIcon from "./components/whatsapp-icon";
+import IconsContact from "./components/icons-contact";
 
 export const metadata: Metadata = {
   title: "Ceisa Honduras",
@@ -183,12 +184,7 @@ export default function LandingPage() {
                   <h1 className="text-landing-text-primary font-bold text-3xl text-center">
                     Encuentranos en nuestras redes sociales y mantente al tanto de nuestras novedades y promociones
                   </h1>
-                  <div className="flex mx-auto w-fit gap-x-6 p-4 rounded-lg">
-                    <IconComponent className="mx-auto" icon={Instagram} />
-                    <IconComponent className="mx-auto" icon={Mail} />
-                    <IconComponent className="mx-auto" icon={Facebook} />
-                    <WhatsappIcon></WhatsappIcon>
-                  </div>
+                  <IconsContact></IconsContact>
                 </div>
               </div>
             </div>

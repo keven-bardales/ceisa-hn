@@ -1,7 +1,12 @@
 import React from "react";
 
 const WhatsappIcon = () => (
-  <div className="bg-landing-primary-main p-2 rounded-lg">
+  <div
+    onClick={() => {
+      window.open("https://wa.me/+50494902267", "_blank");
+    }}
+    className="bg-landing-primary-main p-2 rounded-lg"
+  >
     <svg
       fill="#000000"
       className="h-12 w-12" // Aplicando clases de Tailwind CSS para ajustar el tamaño
